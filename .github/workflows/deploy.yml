@@ -1,0 +1,34 @@
+name: Deploy Flask app to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment when pushing to the 'main' branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Runs on Ubuntu's latest version
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+
+      # Step 4: Run Flask application
+      - name: Run Flask app
+        run: |
+          source venv/bin/activate
+          python3 app.py
