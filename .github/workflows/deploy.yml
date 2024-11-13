@@ -18,14 +18,15 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # You can specify your required version here (e.g., '3.9')
+          python-version: '3.x'  # Use the correct Python version you want, e.g., '3.9'
 
-      # Step 3: Install dependencies
+      # Step 3: Install dependencies globally
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          python -m pip install --upgrade pip  # Upgrade pip to the latest version
+          pip install -r requirements.txt  # Install dependencies from requirements.txt
 
-      # Step 4: Run Flask application (for testing purpose)
+      # Step 4: Run the app to check if everything works
       - name: Run Flask app
         run: |
-          python app.py
+          python3 app.py
