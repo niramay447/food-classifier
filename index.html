@@ -12,12 +12,10 @@
         <input type="file" name="file" accept="image/*">
         <button type="submit">Upload and Classify</button>
     </form>
-
     {% if result %}
         <h2>Classification Result:</h2>
         <p>{{ result | safe }}</p>
     {% endif %}
-
     {% if image_filename %}
         <h3>Uploaded Image:</h3>
         <img src="{{ url_for('uploaded_file', filename=image_filename) }}" alt="Uploaded Image">
