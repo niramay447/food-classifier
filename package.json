@@ -1,0 +1,23 @@
+{
+  "name": "food-classifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niramay447/food-classifier.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niramay447/food-classifier/issues"
+  },
+  "homepage": "https://github.com/niramay447/food-classifier#readme",
+  "devDependencies": {
+    "@gradio/client": "^1.7.1"
+  }
+}

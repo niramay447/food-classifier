@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Food Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Indian/Chinese Foods Classifier</h1>
+    <p>Upload any image to classify it as Indian food or Chinese Food</p>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <button type="submit">Upload and Classify</button>
+    </form>
+
+    {% if result %}
+        <h2>Classification Result:</h2>
+        <p>{{ result | safe }}</p>
+    {% endif %}
+
+    {% if image_filename %}
+        <h3>Uploaded Image:</h3>
+        <img src="{{ url_for('uploaded_file', filename=image_filename) }}" alt="Uploaded Image">
+    {% endif %}
+</body>
+</html>

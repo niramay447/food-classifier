@@ -1,0 +1,80 @@
+body {
+    background-color: #8B0000; /* Deep red shade */
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Apple system font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Styling for the main heading */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Styling for the paragraph text */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Styling for the result section */
+h2 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+/* Uploaded image styling */
+img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+}
